@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home - AI Plant Doctor
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <p class="label">
+            COMPUTER VISION • AI • AGRICULTURE
+        </p>
+
+        <h1>
+            Your plant's
+            <span>AI doctor.</span>
+        </h1>
+
+        <p class="description">
+
+            Upload a leaf image and let our
+            computer-vision model identify
+            potential plant diseases.
+
+        </p>
+
+        <a
+            href="/diagnose"
+            class="button">
+
+            Start Diagnosis →
+
+        </a>
+
+    </div>
+
+
+    <div class="hero-card">
+
+        <div class="leaf-icon">
+            🌱
+        </div>
+
+        <h2>
+            AI Plant Analysis
+        </h2>
+
+        <p>
+            Upload → Analyze → Discover
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="features">
+
+    <div class="feature">
+
+        <h3>
+            🧠 AI Powered
+        </h3>
+
+        <p>
+            MobileNetV2 computer vision
+            model analyzes your leaf.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <h3>
+            ⚡ Fast Analysis
+        </h3>
+
+        <p>
+            Get a prediction directly
+            from your browser.
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <h3>
+            🌿 Plant Detection
+        </h3>
+
+        <p>
+            Identify the plant disease
+            class and confidence.
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}

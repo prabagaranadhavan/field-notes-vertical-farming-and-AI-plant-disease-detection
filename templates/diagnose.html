@@ -1,0 +1,111 @@
+{% extends "base.html" %}
+
+{% block title %}
+Diagnose - AI Plant Doctor
+{% endblock %}
+
+
+{% block content %}
+
+<section class="diagnose">
+
+    <p class="label">
+        AI PLANT DIAGNOSIS
+    </p>
+
+    <h1>
+        Analyze your leaf
+    </h1>
+
+    <p class="description">
+
+        Upload a clear image of a plant leaf
+        and let the AI model analyze it.
+
+    </p>
+
+
+    <form id="uploadForm">
+
+        <div class="upload-box">
+
+            <input
+                type="file"
+                id="imageInput"
+                name="image"
+                accept="image/*"
+                required
+            >
+
+            <div id="previewContainer">
+
+                <img
+                    id="preview"
+                    alt="Leaf preview"
+                >
+
+            </div>
+
+            <p>
+                Choose a leaf image
+            </p>
+
+            <small>
+                JPG, JPEG, PNG
+            </small>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="button">
+
+            🔍 Analyze Leaf
+
+        </button>
+
+    </form>
+
+
+    <div
+        id="loading"
+        class="loading">
+
+        🧠 AI is analyzing your plant...
+
+    </div>
+
+
+    <div
+        id="result"
+        class="result">
+
+        <p class="result-label">
+            AI RESULT
+        </p>
+
+        <h2 id="prediction">
+        </h2>
+
+        <h3>
+            Confidence:
+            <span id="confidence">
+            </span>
+        </h3>
+
+    </div>
+
+
+    <div
+        id="error"
+        class="error">
+    </div>
+
+</section>
+
+<script
+    src="{{ url_for('static', filename='script.js') }}">
+</script>
+
+{% endblock %}
